@@ -868,7 +868,7 @@ async def handle_large_file(file, sender, edit, caption):
                 duration=duration,
                 progress=progress_bar,
                 progress_args=(
-                    "╭─────────────────────╮\n│       **__4GB Uploader__ ⚡**\n├─────────────────────",
+                    "**__4GB Uploader__**",
                     edit,
                     time.time()
                 )
@@ -882,7 +882,7 @@ async def handle_large_file(file, sender, edit, caption):
                 thumb=thumb_path,
                 progress=progress_bar,
                 progress_args=(
-                    "╭─────────────────────╮\n│      **__4GB Uploader ⚡__**\n├─────────────────────",
+                    "**__4GB Uploader ⚡__**",
                     edit,
                     time.time()
                 )
@@ -894,7 +894,7 @@ async def handle_large_file(file, sender, edit, caption):
         if freecheck == 1:
             reply_markup = InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/kingofpatal")]
+                    [InlineKeyboardButton("Get Premium", url="https://t.me/E_5_77")]
                 ]
             )
             await app.copy_message(
@@ -991,7 +991,7 @@ def progress_callback(done, total, user_id):
     # Format the progress bar
     completed_blocks = int(percent // 10)
     remaining_blocks = 10 - completed_blocks
-    progress_bar = "♦" * completed_blocks + "◇" * remaining_blocks
+    progress_bar = "✅" * completed_blocks + "🚀" * remaining_blocks
     
     # Convert done and total to MB for easier reading
     done_mb = done / (1024 * 1024)  # Convert bytes to MB
@@ -1018,16 +1018,9 @@ def progress_callback(done, total, user_id):
     
     # Format the final output as needed
     final = (
-        f"╭──────────────────╮\n"
-        f"│     **__SpyLib ⚡ Uploader__**       \n"
-        f"├──────────\n"
-        f"│ {progress_bar}\n\n"
-        f"│ **__Progress:__** {percent:.2f}%\n"
-        f"│ **__Done:__** {done_mb:.2f} MB / {total_mb:.2f} MB\n"
-        f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
-        f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
-        f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"Progress: {percent:.2f}%\n"
+        f"Done: {done_mb:.2f} MB / {total_mb:.2f} MB\n"
+        f"Speed:** {speed_mbps:.2f} Mbps\n"
     )
     
     # Update tracking variables for the user
@@ -1054,7 +1047,7 @@ def dl_progress_callback(done, total, user_id):
     # Format the progress bar
     completed_blocks = int(percent // 10)
     remaining_blocks = 10 - completed_blocks
-    progress_bar = "♦" * completed_blocks + "◇" * remaining_blocks
+    progress_bar = "✅" * completed_blocks + "🚀" * remaining_blocks
     
     # Convert done and total to MB for easier reading
     done_mb = done / (1024 * 1024)  # Convert bytes to MB
@@ -1081,16 +1074,9 @@ def dl_progress_callback(done, total, user_id):
     
     # Format the final output as needed
     final = (
-        f"╭──────────────────╮\n"
-        f"│     **__SpyLib ⚡ Downloader__**       \n"
-        f"├──────────\n"
-        f"│ {progress_bar}\n\n"
-        f"│ **__Progress:__** {percent:.2f}%\n"
-        f"│ **__Done:__** {done_mb:.2f} MB / {total_mb:.2f} MB\n"
-        f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
-        f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
-        f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"Progress:** {percent:.2f}%\n"
+        f"Done: {done_mb:.2f} MB / {total_mb:.2f} MB\n"
+        f"**Speed:** {speed_mbps:.2f} Mbps\n"
     )
     
     # Update tracking variables for the user
@@ -1130,7 +1116,7 @@ async def split_and_upload_file(app, sender, target_chat_id, file_path, caption,
             part_caption = f"{caption} \n\n**Part : {part_number + 1}**"
             await app.send_document(target_chat_id, document=part_file, caption=part_caption, reply_to_message_id=topic_id,
                 progress=progress_bar,
-                progress_args=("╭─────────────────────╮\n│      **__Pyro Uploader__**\n├─────────────────────", edit, time.time())
+                progress_args=("**Joker Uploader**", edit, time.time())
             )
             await edit.delete()
             os.remove(part_file)  # Cleanup after upload
